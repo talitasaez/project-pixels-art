@@ -7,8 +7,6 @@ terceiraCor.style.backgroundColor = 'red';
 const quartaCor = document.getElementsByClassName('color')[3];
 quartaCor.style.backgroundColor = 'green';
 
-
-
 function selecionarCor() {
   let classSelected = document.getElementsByClassName('color');
   for (let index = 0; index < classSelected.length; index += 1) {
@@ -28,22 +26,18 @@ function elementClick(event) {
 
 selecionarCor();
 
-function pixel () {
-    let pixelClick = document.getElementsByClassName ('pixel');
-        for (let index = 0; index < pixelClick.length; index += 1) {
-          pixelClick[index].addEventListener ('click',pixelColor);
-        }
-    }
-       pixel();
+function pixel() {
+  let pixelClick = document.getElementsByClassName('pixel');
+  for (let index = 0; index < pixelClick.length; index += 1) {
+    pixelClick[index].addEventListener('click', pixelColor);
+  }
+}
+pixel();
 
-   function pixelColor (event) {
-     let pixelClick = document.getElementsByClassName ('pixel');
-     console.log('teste');
-     // pixelClick.addEventListener ('click', function ()){
-     let selectColor = document.querySelector('.selected');
-     let colorstyle = selectColor.style.backgroundColor;
-          event.target.style.backgroundColor = colorstyle;
-
-       } 
-
-   
+function pixelColor(event) {
+  let pixelClick = document.getElementsByClassName('pixel');
+  console.log('teste');
+  let selectColor = document.querySelector('.selected');
+  let colorstyle = selectColor.style.backgroundColor;
+  event.target.style.backgroundColor = colorstyle;
+}
