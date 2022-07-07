@@ -41,3 +41,15 @@ function pixelColor(event) {
   let colorstyle = selectColor.style.backgroundColor;
   event.target.style.backgroundColor = colorstyle;
 }
+
+
+const botao = document.getElementById('clear-board');
+function limparBotao () {
+    const pixels = document.querySelectorAll('.pixel');
+    for (let index =0; index < pixels.length; index += 1){
+        pixels[index].style.backgroundColor = 'white'
+        botao.addEventListener('click', limparBotao);
+}
+}
+
+botao();
