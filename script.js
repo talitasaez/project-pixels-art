@@ -48,8 +48,9 @@ function limparBotao () {
     const pixels = document.querySelectorAll('.pixel');
     for (let index =0; index < pixels.length; index += 1){
         pixels[index].style.backgroundColor = 'white'
-        botao.addEventListener('click', limparBotao);
-}
+       
 }
 
-botao();
+}
+
+botao.addEventListener('click', limparBotao);
